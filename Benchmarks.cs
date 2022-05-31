@@ -25,7 +25,7 @@ namespace nlog.loki.benchmark
         
         static void Main(string[] args) => BenchmarkSwitcher.FromAssemblies(new[] { typeof(Program).Assembly }).Run(args);
 
-        [Params(4, 12, 100, 1000)]
+        [Params(4, 12, 100, 1_000, 10_000)]
         public int NumberLogs;
 
         private List<Action> LoggingStatements;
